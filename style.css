@@ -1,13 +1,21 @@
+:root {
+  --orange: #f17949;
+  --yellow: #fab131;
+  --light-blue: ##c7ddea;
+  --gray: #a9a19e;
+  --body: #ebebeb;
+
+  --paragraph: "Fira Sans", sans-serif;
+  --heading: "Frank Ruhl Libre", serif;
+}
+
 body {
   margin: 0;
+  background-color: var(--body);
 }
 
 .wrapper {
   display: grid;
-  /* grid-template-areas:
-    "header-left header-right-top "
-    "header-left header-right-bottom"
-    "nav nav"; */
 }
 
 .header {
@@ -19,7 +27,13 @@ body {
   background-color: red;
   grid-template-columns: 1fr 1fr;
 }
-
+.header h1,
+.header h2 {
+  font-family: var(--heading);
+}
+p {
+  font-family: var(--paragraph);
+}
 .header-left {
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
@@ -33,11 +47,26 @@ body {
     "header-image-container ";
 }
 
+.header-left span {
+  color: #fff;
+}
+
+.header-left h1 {
+  font-weight: 1000;
+  font-size: 300%;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
 .header-left button {
+  box-shadow: 10px;
   width: 120px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 20px;
   border: 0;
+  font-family: var(--paragraph);
+  font-weight: 1000;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 .header-left img {
   width: 50%;
@@ -48,10 +77,8 @@ body {
 .header-text-wrapper {
   grid-area: header-text-wrapper;
   display: grid;
-  max-width: 50%;
-  align-content: center;
-  justify-items: center;
-  padding: 10px;
+  max-width: 60%;
+  padding: 20px;
 }
 .header-image-container {
   grid-area: header-image-container;
@@ -63,22 +90,47 @@ body {
 .header-right-top {
   grid-area: header-right-top;
   display: grid;
-  background-color: purple;
+  background-color: var(--orange);
+  align-items: end;
+  justify-items: center;
+  line-height: 0;
+}
+.header-right-top h2 {
+  align-self: self-start;
+  color: #fff;
+}
+.header-right-bottom h2 {
+  color: #fff;
 }
 
 .header-right-bottom {
   grid-area: header-right-bottom;
   display: grid;
-  background-color: pink;
+  background-color: var(--yellow);
+  align-items: end;
+  justify-items: center;
+  line-height: 0;
+}
+.header-right-bottom h2 {
+  align-self: self-start;
 }
 
 .header-bottom {
   grid-area: nav;
+  background-color: var(--body);
+  color: black;
+  font-family: var(--paragraph);
+  color: var(--gray);
 }
 
 ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+ul li:first-child {
+  color: black;
 }
 
 li {
