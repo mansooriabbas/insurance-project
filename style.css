@@ -21,32 +21,43 @@ body {
 }
 
 .header-left {
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
   grid-area: header-left;
   background-color: #c7ddea;
   display: grid;
   justify-items: center;
   /*  Nested text-wrapper */
-  grid-template-areas: "text-wrapper";
+  grid-template-areas:
+    "header-text-wrapper "
+    "header-image-container ";
 }
+
 .header-left button {
-  width: 20%;
-  height: 50%;
-  border-radius: 4%;
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
   border: 0;
 }
 .header-left img {
-  width: 30%;
+  width: 50%;
   height: auto;
   object-fit: cover;
 }
 
-.text-wrapper {
+.header-text-wrapper {
+  grid-area: header-text-wrapper;
   display: grid;
-  border: 1px solid black;
   max-width: 50%;
   align-content: center;
   justify-items: center;
+  padding: 10px;
+}
+.header-image-container {
+  grid-area: header-image-container;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .header-right-top {
