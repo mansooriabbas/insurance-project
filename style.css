@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  background-color: var(--body);
+  background-color: var(--body); 
 }
 .page-wrapper {
   max-width: 900px;
@@ -206,7 +206,7 @@ li {
 .card-stack {
   display: grid;
   grid-template-columns: 280px 280px 280px;
-  grid-template-rows: 1fr repeat(2, 1fr);
+  grid-template-rows: 1fr repeat(1, 1fr);
   grid-row: 1 /4;
   grid-column: 1 /4;
   gap: 20px;
@@ -304,7 +304,7 @@ li {
   grid-template-areas:
     "title title title"
     "text text text";
-  
+  padding: 70px;
   background-color: var(--yellow);
   place-items: center;
 }
@@ -327,7 +327,7 @@ li {
 .info-boxes {
   display: grid;
   grid-template-columns: 1fr repeat(2, 1fr);
-  grid-template-rows: 1fr repeat(2, 1fr);
+  grid-template-rows: 1fr ;
   place-items: center;
 }
 
@@ -484,4 +484,32 @@ li {
     font-family: var(--heading);
   }
   background-color: #ffffff;
+}
+
+footer{
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #777574;
+}
+.top-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--gray);
+  width: 100%;
+  background-color: #a9a19e;
+  height: 50px;
+
+  i{
+    margin-top: 10px;
+    line-height: .5;
+    
+  }
+  p {
+    line-height: 0;
+  }
+
 }
