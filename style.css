@@ -654,3 +654,34 @@ a {
   background-color: #777574;
   height: 300px;
 }
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    display: grid;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr repeat(5, 1fr);
+    grid-template-rows: 1fr repeat(5, 1fr);
+
+    h1 {
+    }
+
+    .header-left {
+      grid-column: 1 / 7;
+      grid-row: 1 / 7;
+    }
+
+    .header-right-top {
+      display: none;
+    }
+    .header-right-bottom {
+      display: none;
+    }
+  }
+
+  .header-bottom {
+    display: none;
+  }
+}
