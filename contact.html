@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Frank+Ruhl+Libre:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header class="contact-header">
+      <h1>Oh hello there!</h1>
+      <img src="img/man-baby.png" alt="Man with a baby on his head" />
+    </header>
+    <nav class="contact-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>Our offer</li>
+        <li>Why us</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <main class="contact-main">
+      <h1>Whats on your mind?</h1>
+
+      <form class="contact-main-form" action="/submit" method="POST">
+        <label class="email" for="email">Your email:</label>
+
+        <input class="input" type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          cols="50"
+          required
+        ></textarea>
+
+        <input class="button" type="submit" value="Submit" />
+      </form>
+    </main>
+  </body>
+</html>
