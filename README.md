@@ -1,5 +1,6 @@
 # Insurance Project
 
+
 This project serves as an exercise in HTML and CSS layout using grid techniques. It showcases the layout of an insurance website.
 
 ## Project Structure
@@ -14,3 +15,5 @@ The project comprises various HTML files and a CSS file:
 
 The web pages are designed with responsiveness in mind. Media queries are utilized within the CSS file to ensure adaptability across various devices and screen sizes. This allows for an optimal viewing experience, adjusting the layout and content presentation as needed.
 
+### Live Site
+ https://mansooriabbas.github.io/lexicon-insurance-project/
