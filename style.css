@@ -757,3 +757,8 @@ a {
     grid-row: 3 / 4;
   }
 }
+
+.info-boxes{
+  grid-template-rows: 1fr repeat(5, 1fr);
+  grid-template-columns: 1fr ;
+}
